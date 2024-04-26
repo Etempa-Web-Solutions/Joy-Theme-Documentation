@@ -10,7 +10,6 @@ favicon_ico: "/assets/images/favicon.ico"
 
 callouts:
   warning:
-    title: Warning
     color: red
   info: 
     title: Info
