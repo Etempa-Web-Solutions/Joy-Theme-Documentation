@@ -3,3 +3,16 @@ description: Developer documentation for the Joy Shopify theme
 theme: just-the-docs
 
 url: https://etempa-web-solutions.github.io/Joy-Theme-Documentation/
+
+logo: "/assets/images/shopify_icon.png"
+
+favicon_ico: "/assets/images/favicon.ico"
+
+callouts:
+  warning:
+    title: Warning
+    color: red
+  info: 
+    title: Info
+    color: grey
+
