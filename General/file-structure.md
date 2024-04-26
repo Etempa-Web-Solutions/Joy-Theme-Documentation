@@ -5,7 +5,7 @@ parent: General
 nav_order: 2
 ---
 
-# Coding Style
+# File Structure
 
 The file structure will follow the standard Shopify theme structure, with the addition of an includes folder for our SASS and javascript files. **Bear in mind that anything in this includes folder will not be uploaded to Shopify and therefore only files which are being compiled should be put here**. Anything else should go in the assets folder. 
 

@@ -43,9 +43,11 @@ if(x == z)
 
 All code to be properly indented. A tab is 4 spaces
 
+---
+
 ## CSS Coding Style
 
-Put any @includes at the top of the selector styles list and try to group similar styles
+Put any `@includes` at the top of the selector styles list and try to group similar styles
 
 ```css
 .my_class
@@ -69,8 +71,10 @@ Use the variables SASS file for anything that might be repeatedly used across th
 - Widths (specifically container widths)
 - Font styles (face, weights) 
 
-
-Try to avoid !important where possible and do not rely on CSS positioning to overwrite styles. Use more specific definitions.
+{: .warning }
+> !important
+>
+> Try to avoid `!important` where possible and do not rely on CSS positioning to overwrite styles. Use more specific definitions.
 
 All partial file names to begin with _ 
 
@@ -88,9 +92,11 @@ All partial file names to begin with _
 
 - Please be responsible for the responsiveness of any CSS you code
 
+---
+
 ## Javascript Coding Style
 
-All javascript classes to be in their own individual file, named the same as the class name i.e class HtmlElement should be in a file called html-element.js
+All javascript classes to be in their own individual file, named the same as the class name i.e class `HtmlElement` should be in a file called `html-element.js`
 
 All javascript classes to be kept in the includes/javascript/classes folder which will be compiled into one javascript file for production. To compile your javascript, run
 
@@ -100,7 +106,7 @@ Although a javascript object doesn’t require you to declare a variable in the 
 
 A list of variables used in the class should be added to a commented list at the top of the class, including any variables set in the constructor and any variables available from get / set methods
 
-Variables saved in a set method should follow the naming format of _nameOfSetMethod i.e if the set method is name, the variable saved should be _name
+Variables saved in a set method should follow the naming format of `_nameOfSetMethod` i.e if the set method is name, the variable saved should be `_name`
 
 Additional javascript code should be added into their own file, grouped by page template where sensible i.e collection.js, product.js and only included on the page template it is required
 
