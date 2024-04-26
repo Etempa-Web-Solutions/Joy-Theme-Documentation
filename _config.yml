@@ -14,5 +14,5 @@ callouts:
     color: red
   info: 
     title: Info
-    color: grey
+    color: grey-lt-200
 
