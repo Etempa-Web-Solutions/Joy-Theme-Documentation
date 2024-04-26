@@ -1,8 +1,8 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: Joy Theme Documentation
+description: Developer documentation for the Joy Shopify theme
 theme: just-the-docs
 
-url: https://just-the-docs.github.io
+url: https://etempa-web-solutions.github.io/Joy-Theme-Documentation/
 
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  Template Repository: https://github.com/Etempa-Web-Solutions/Joy-Theme-Documentation
