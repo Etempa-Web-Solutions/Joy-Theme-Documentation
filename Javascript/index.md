@@ -1,5 +1,5 @@
 ---
-title: JS
+title: Javascript
 layout: default
 nav_order: 3
 ---
