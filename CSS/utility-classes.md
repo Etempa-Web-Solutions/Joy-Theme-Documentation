@@ -6,6 +6,9 @@ parent: CSS
 ---
 
 # Utility Classes
+{: .no_toc }
+
+{:toc}
 
 ## Structure
 
