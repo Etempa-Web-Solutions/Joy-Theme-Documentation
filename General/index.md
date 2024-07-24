@@ -14,11 +14,12 @@ We will be using the following tech stack for coding our Shopify theme:
 - CSS
     - SASS
         - Individual SASS files for each section
-        - General files split by partisla
-        - 1 response SASS file
-    - Locally compiled to 2 minified CSS files
+        - General files split by partials
+        - 1 responsive SASS file
+    - Locally compiled to minified CSS files
         - critical
         - main
+        - css file for each section
 - Javascript
     - Object Oriented Javascript
     - Custom Elements
@@ -38,5 +39,13 @@ When you have finished your local work, merge your branch with the master branch
 In the event of any conflicts, please work with the other developer to resolve. 
 
 For help on working with Shopify CLI, git and creating / merging branches into the live theme, see the Team Handbook – Shopify Project Setup. 
+
+## Developing
+
+When running the project for the first time, make sure to run `npm install` to install any of the dependencies in the project
+
+From then on, run `npm start` whenever you start developing. This will run all of the various SASS and JS compilers and put everything in the right place.
+
+You will also need to run `shopify theme dev --store=etempa-joy-theme` to preview your work. You can run this in a separate Terminal tab in order to have both commands running simultaneously
 
 

@@ -54,7 +54,7 @@ Put any `@includes` at the top of the selector styles list and try to group simi
 {
     @include a_mixin();
 
-    text-align: center:
+    text-align: center;
     text-transform: uppercase;
 
     width: 100px;
@@ -64,12 +64,6 @@ Put any `@includes` at the top of the selector styles list and try to group simi
 }
 
 ```
-
-Use the variables SASS file for anything that might be repeatedly used across the board for consistency such as:
-- Border Radius
-- Colours
-- Widths (specifically container widths)
-- Font styles (face, weights) 
 
 {: .warning }
 > !important
@@ -113,4 +107,36 @@ Additional javascript code should be added into their own file, grouped by page 
 ## JSON Coding Style
 
 Unless order is important for displaying options to the user, position JSON key / value pairs in alphabetical order so it is easier to find things. The only exception is where we have a ‘header / heading / title’ key – this makes sense to be at the top to give context to the rest of the settings. 
+
+## Liquid Coding Style
+
+All HTML elements to be properly indented.
+
+If an HTML element has **over three attributes (that aren't class or id)** then these can be placed on new lines to make readability better
+
+e.g.
+
+```html
+<button class='button' id='button'
+    type='button'
+    data-id='123434'
+    data-behaviour='add'
+    data-submit='false'
+>
+    <span>Click Me</span>
+</button>
+```
+
+When a block of liquid codes goes over **5 lines** use the `{% liquid %}` tag to enclose the code
+
+```liquid
+{% liquid
+    assign my_variable = 'text'
+    if my_variable contains 'text'
+        for product in collection.products
+            assign my_variable = product.id
+        endfor
+    endif
+%}
+```
 

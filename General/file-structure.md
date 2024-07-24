@@ -11,7 +11,15 @@ The file structure will follow the standard Shopify theme structure, with the ad
 
 ## CSS Files
 
-Any variables go in the _variables.scss file. Mixins go in _mixins.scss. 
+SASS files are found in **/includes/sass** and are split into two folders: **main-partials** and **sections**
+
+### main-partials
+
+The main-partials folder contains all of the partials files that make up the main css file
+
+Any variables go in the _variables.scss file. These variables are only used in SCSS, and so cannot be accessed by the Shopify customiser. This file is useful for saving any variables that are for development purposes.
+
+Mixins go in _mixins.scss.
 
 You will not need to use _normalise.scss, which has already been setup. 
 
@@ -23,28 +31,12 @@ _main.scss is essentially for anything else that isn’t specific enough to have
 
 _responsiveness.scss is currently used for all responsiveness. 
 
+_utilities.scss contains all of the CSS utility classes that can be used when writing the HTML
+
+### sections
+
 Every section should have its own partial file.
 
-Make every effort to keep similar styles together or we will be in chaos. If in doubt, ctrl + f to see which file a style is in. 
+These will then be compiled into separate css files in assets. Each section file will have to be included at the top of a section file
 
-
-## CSS Files
-
-The main aim of this site is to avoid writing anything twice.
-
-The css variables.scss file contains css variables. Please add to it. 
-
-Check out and use the mixins where appropriate. Again, please add to it. 
-
-When specifying text styles, you should always use a text element such as h1-h6, p or li to surround text. These text styles will have both the font mixins automatically applied to them. 
-
-If you need to specify another text element for a specific reason, please remember to apply both the font style and font size mixin to the element in CSS. 
-
-To keep font sizes consistent, please use the font_size_ratio mixin with either whole numbers or .5 numbers. In specific circumstances, you can use either .2 or .7, or an actual font-size (mainly for responsiveness) but try to avoid this. Using the mixin means we can re-size the entire theme’s font sizing easily.  
-
-Do not go smaller than 0 unless it’s for a very specific reason. To go smaller than 0, you can use 0.7 (yes 0.7 is larger than 0, but it’s just how maths works in my function). Bear in mind we must not go smaller than 14px anywhere. 
-
-Some more important mixins are display_grid(). You can put the grid-gap as a parameter such as display_grid(60px). It defaults to 20px if you don’t add anything. 
-
-Add @includes text_container_edge_margin_reset() to a div and the top margin of the first element and the bottom margin of the last element will be removed. This is really handy for vertical centring to make sure the box is the right size and not being distorted by additional margins from the text. 
-
+The sections files are separated out, and so if you want to make use of mixins, remember to include the _mixins file at the top of the section SCSS file
