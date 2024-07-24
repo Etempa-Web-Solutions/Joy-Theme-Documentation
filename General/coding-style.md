@@ -129,6 +129,7 @@ e.g.
 
 When a block of liquid codes goes over **5 lines** use the `liquid` tag to enclose the code
 
+{% raw %}
 ```
 {% liquid
     assign my_variable = 'text'
@@ -139,4 +140,4 @@ When a block of liquid codes goes over **5 lines** use the `liquid` tag to enclo
     endif
 %}
 ```
-
+{% endraw %}
