@@ -8,7 +8,10 @@ parent: CSS
 # Utility Classes
 {: .no_toc }
 
+Table of Contents
 {:toc}
+
+---
 
 ## Structure
 
@@ -19,9 +22,16 @@ parent: CSS
 
 ## Box Model
 
+
+---
+
 ## Layout
 
+---
+
 ## Text
+
+---
 
 ## Visibility
 
@@ -32,17 +42,23 @@ parent: CSS
 | `.visually_hidden` | Visually hides element, but can still be detected by screen-readers
 
 
+---
+
 ## Functionality
 
 | Class | Function |
 |--- | --- |
 | `.disable_pointer_events` | Disables poitner-events (i.e. click, hover etc)
 
+---
+
 ## Box Shadow
 
 | Class | Function |
 |--- | --- |
 | `.box_shadow_subtle`, `.box_shadow_medium` `.box_shadow_bold`,  | Varying degrees of box-shadow
+
+---
 
 ## Animations
 
