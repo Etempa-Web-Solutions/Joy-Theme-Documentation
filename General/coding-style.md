@@ -127,7 +127,7 @@ e.g.
 </button>
 ```
 
-When a block of liquid codes goes over **5 lines** use the `{% liquid %}` tag to enclose the code
+When a block of liquid codes goes over **5 lines** use the `liquid` tag to enclose the code
 
 ```
 {% liquid
