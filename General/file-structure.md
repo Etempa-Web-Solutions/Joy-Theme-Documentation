@@ -7,6 +7,11 @@ nav_order: 2
 
 # File Structure
 
+1. TOC
+{:toc}
+
+---
+
 The file structure will follow the standard Shopify theme structure, with the addition of an includes folder for our SASS and javascript files. **Bear in mind that anything in this includes folder will not be uploaded to Shopify and therefore only files which are being compiled should be put here**. Anything else should go in the assets folder. 
 
 ## CSS Files
@@ -14,6 +19,7 @@ The file structure will follow the standard Shopify theme structure, with the ad
 SASS files are found in **/includes/sass** and are split into two folders: **main-partials** and **sections**
 
 ### main-partials
+{: .no_toc }
 
 The main-partials folder contains all of the partials files that make up the main css file
 
@@ -34,9 +40,14 @@ _responsiveness.scss is currently used for all responsiveness.
 _utilities.scss contains all of the CSS utility classes that can be used when writing the HTML
 
 ### sections
+{: .no_toc }
 
 Every section should have its own partial file.
 
 These will then be compiled into separate css files in assets. Each section file will have to be included at the top of a section file
 
 The sections files are separated out, and so if you want to make use of mixins, remember to include the _mixins file at the top of the section SCSS file
+
+
+## JS Files
+
