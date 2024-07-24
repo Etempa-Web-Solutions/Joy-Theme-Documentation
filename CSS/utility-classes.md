@@ -8,7 +8,7 @@ parent: CSS
 # Utility Classes
 {: .no_toc }
 
-Table of Contents
+1. TOC
 {:toc}
 
 ---
