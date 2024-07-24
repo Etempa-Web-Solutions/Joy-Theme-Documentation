@@ -129,7 +129,7 @@ e.g.
 
 When a block of liquid codes goes over **5 lines** use the `{% liquid %}` tag to enclose the code
 
-```liquid
+```html
 {% liquid
     assign my_variable = 'text'
     if my_variable contains 'text'
