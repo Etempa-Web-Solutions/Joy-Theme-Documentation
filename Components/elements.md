@@ -52,7 +52,7 @@ Additional styles can be found in the table below:
 Use the following markup for buttons with a loading state:
 
 ```html
-<button-loading 
+<button-loading-container 
     data-loading-text='Loading'
     data-loading-text-visible='true'
     data-finished-text='Finished'
@@ -63,10 +63,10 @@ Use the following markup for buttons with a loading state:
         <span class='button_text'>Loading Button</span>
         {% raw %}{% render 'loading_spinner' %}{% endraw%}
     </button>
-</button-loading>
+</button-loading-container>
 ```
 
-The `button-loading` element will handle the loading state of the button, with the option to add loading text, and finished state text. Using this element will mean that the loading state remains accessible while loading. You can also use it to stop repeat clicks on a 'loading' button. You can customise the behaviour with data attributes.
+The `button-loading-container` element will handle the loading state of the button, with the option to add loading text, and finished state text. Using this element will mean that the loading state remains accessible while loading. You can also use it to stop repeat clicks on a 'loading' button. You can customise the behaviour with data attributes.
 
 | Attributes | Function |
 |--- | --- |
@@ -77,6 +77,27 @@ The `button-loading` element will handle the loading state of the button, with t
 | `data-prevent-double-click` | When true, this will prevent the button from being clicked whilst it is in the loading state. Default: true
 
 **Note** The 'loading_spinner' is a liquid snippet in the theme, and is required to be added to the button.
+
+#### Button loading API
+
+To set the button to its loading state:
+
+```js
+    let button = document.querySelector('.button')
+    let buttonLoader = button.closest('button-loading-container')
+    buttonLoader.loading = true
+```
+
+You can also pass in a callback so that the element will keep track (and optionally reject) any additional clicks
+
+```js
+    let button = document.querySelector('.button')
+    let buttonLoader = button.closest('button-loading-container')
+    buttonLoader.addEventHandler('click', () => {
+        //do something
+    })
+
+```
 
 ### Button With Icon
 {: .no_toc }
@@ -89,3 +110,9 @@ Use the following markup for a button with an icon:
     {% raw %}{% render 'icon-arrow-right' %}{% endraw %}
 </button>
 ```
+
+## Text Elements
+
+Where possible, use appropriate heading types for the heading that you need. However, sometimes you need to make something look like a different heading level, in which case you can use classes: `.h0` - `.h6` Where `.h0` is the largest size.
+
+Section headings can be defined by using `.section_heading` which will remove the top margin of the heading.
