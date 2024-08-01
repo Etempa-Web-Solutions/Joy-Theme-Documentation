@@ -111,6 +111,21 @@ Use the following markup for a button with an icon:
 </button>
 ```
 
+### Icon Button
+{: .no_toc }
+
+Use the following markup for an icon button:
+
+```html
+<button class='button icon_button no_bg no_border'>
+    <span class='visually_hidden'>Search</span>
+    {% raw %}{% render 'icon-search' %}{% endraw %}
+</button>
+```
+
+The classess `no_bg` and `no_border` remove the background and border respectively. Otherwise, all other button styles can be used
+
+
 ## Text Elements
 
 Where possible, use appropriate heading types for the heading that you need. However, sometimes you need to make something look like a different heading level, in which case you can use classes: `.h0` - `.h6` Where `.h0` is the largest size.
