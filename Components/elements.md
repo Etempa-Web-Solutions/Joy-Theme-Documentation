@@ -66,7 +66,7 @@ Use the following markup for buttons with a loading state:
 </button-loading>
 ```
 
-The `button-loading` element will handle the loading state of the button, with the option to add loading text, and finished state text. Using this element will mean that the loading state remains accessibly while loading. You can also use it to stop repeat clicks on a 'loading' button. You can customise the behaviour with data attributes.
+The `button-loading` element will handle the loading state of the button, with the option to add loading text, and finished state text. Using this element will mean that the loading state remains accessible while loading. You can also use it to stop repeat clicks on a 'loading' button. You can customise the behaviour with data attributes.
 
 | Attributes | Function |
 |--- | --- |
