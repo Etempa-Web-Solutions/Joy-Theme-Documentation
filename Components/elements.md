@@ -79,6 +79,7 @@ The `button-loading-container` element will handle the loading state of the butt
 **Note** The 'loading_spinner' is a liquid snippet in the theme, and is required to be added to the button.
 
 #### Button loading API
+{: .no_toc }
 
 To set the button to its loading state:
 
@@ -131,3 +132,7 @@ The classess `no_bg` and `no_border` remove the background and border respective
 Where possible, use appropriate heading types for the heading that you need. However, sometimes you need to make something look like a different heading level, in which case you can use classes: `.h0` - `.h6` Where `.h0` is the largest size.
 
 Section headings can be defined by using `.section_heading` which will remove the top margin of the heading.
+
+### Text Container
+
+Using the class `.text_content_container` will add a small amount of padding as well as adding the `text_content_container` mixin (meaning the margins are tidied up around the first and last elements). If you need any extra padding, or no padding at all then these can be added as classes (e.g. `.no_padding`)
