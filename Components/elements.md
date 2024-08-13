@@ -41,7 +41,6 @@ Additional styles can be found in the table below:
 |--- | --- |
 | `.button` | Sets up button styling. Defaults to 'primary' colours
 | `.button_secondary` | Adds secondary colours
-| `.button_tertiary` | Adds tertiary colours
 | `.button_large` | Large version of button
 | `.disabled [disabled]] or [aria-disabled='true']` | Disabled button, no pointer-events
 | `.no_hover_style` | Remove hover styles
@@ -136,3 +135,109 @@ Section headings can be defined by using `.section_heading` which will remove th
 ### Text Container
 
 Using the class `.text_content_container` will add a small amount of padding as well as adding the `text_content_container` mixin (meaning the margins are tidied up around the first and last elements). If you need any extra padding, or no padding at all then these can be added as classes (e.g. `.no_padding`)
+
+## Form Fields
+
+Form fields such as inputs, selects and textareas **should all have ids with labels associated with them**.
+
+You can organise forms using the Grid or Flex layouts, or write custom css to style specific forms.
+
+To structure a form, you can use a `<div>` with the `.field` class:
+
+```html
+<div class='field '>
+    <label for="text_input" class='form_label'>Text input</label>
+    <input id="text_input" type="text" class='form_input'> 
+</div>
+```
+
+Labels should have the `.form_label` class.
+Standard inputs (text, number, password, email) should have the `.form_input` class.
+
+Text areas should have the `.form_text_area` class, and Selects should have the `.form_select` class.
+
+There are a few ways to customise some ofthe for elements:
+
+### Custom select
+{:no_toc}
+
+```html
+<div class='field'>      
+    <label for="select" class='form_label'>Select</label>
+    <div class='select_container'>
+        <select id="select" class='form_select'>
+        <option value="option-1">Option 1</option>
+        <option value="option-2">Option 2</option>
+        <option value="option-3">Option 3</option>
+        </select>
+        {% raw %}{% render 'icon-chevron-down' %}{% endraw %}
+    </div>
+</div>
+```
+
+This will render a select element with a floating icon on the right, in this example a down-facing chevron
+
+### Input list
+{:no_toc}
+
+To use an input list, such as for a radio group:
+
+```html
+<div class='field'>  
+    <fieldset>
+        <legend class='form_label'>Radio Options</legend>
+        <div class='input_list'>
+            <div class='input_list_row'> 
+                <input id="option-1" type="radio" name="radio-options" class='form_radio'>
+                <label for="option-1" class='form_label'>Option 1</label>
+            </div>
+            <div class='input_list_row'> 
+                <input id="option-2" type="radio" name="radio-options" class='form_radio'>
+                <label for="option-2" class='form_label'>Option 2</label>
+            </div>
+        </div>
+    </fieldset>
+</div>
+```
+
+### Custom checkboxes
+{:no_toc}
+
+```html
+<div class='field'>  
+    <fieldset>
+        <legend class='form_label'>Checkbox Options</legend>
+        <div class='input_list'>
+            <div class='input_list_row custom_checkbox_container'> 
+                <input id="option-3" type="checkbox" name="options" class='form_checkbox'>
+                <label for="option-3" class='form_label'>Option 1</label>
+            </div>
+            <div class='input_list_row custom_checkbox_container'> 
+                <input id="option-4" type="checkbox" name="options" class='form_checkbox'>
+                <label for="option-4" class='form_label'>Option 2</label>
+            </div>
+        </div>
+    </fieldset>
+</div>
+```
+This will replace the standard checkboxes with custom boxes that are filled in with the current primary colour when checked. 
+
+The boxes will scale with font size, so if you want them to be larger, you can increase the font size of the label (or the whole 'field')
+
+### Input with button
+{:no_toc}
+
+```html
+<div class='field'>
+    <label for="email_newsletter" class='form_label'>Email input with button</label>
+    <div class='input_with_floating_button'>
+        <input id="email_newsletter" placeholder='Enter your email address' type="email" class='form_input'>
+        <button type='button' class='button no_bg no_border button_icon'>
+            <span class='button_text visually_hidden'>Submit email address</span>
+            {% raw %}{% render 'icon-arrow-right' %}{% endraw %}
+        </button> 
+    </div>
+</div> 
+```
+
+This will render a text input with a button. The button can be of any of the button styles
