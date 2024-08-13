@@ -18,7 +18,12 @@ parent: CSS
 | Class | Function |
 |--- | --- |
 | `.main_container` | Constrains element to page width size
-| `.content_section` | Adds large vertical spacing to element.
+| `.content_section` | Adds vertical spacing to element.
+| `.content_section_large` `.content_section_small` | Adds small/large vertical spacing to element.
+| `.content_section.top_spacing_only` `.content_section.bottom_spacing_only` | Adds vertical spacing to top/bottom only.
+| `.content_section.content_section_has_background` | Add additional class if content section has coloured background to re-instate padding
+
+
 
 ## Box Model
 
