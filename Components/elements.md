@@ -242,6 +242,54 @@ The boxes will scale with font size, so if you want them to be larger, you can i
 
 This will render a text input with a button. The button can be of any of the button styles
 
+## Quantity Input w/buttons
+
+The Quantity input is an input of type `[number]` with two buttons that can be used to increase/decrease the number input. 
+
+It can be rendered in the following way:
+
+```html
+{% raw %}
+    {% render 'quantity-input'
+        min: min,
+        value: value,
+        max: max,
+        label: label,
+        decrease_button_label: decrease_button_label,
+        increase_button_label: increase_button_label,
+        id: id,
+        name: name
+        data_attributes: data_attributes
+    %}
+{% endraw %}
+```
+
+| Argument | Function |
+|--- | --- |
+| `min` | minimum value of inout (default: 1)
+| `max` |  maximum value of input (optional)
+| `value` | default value of input (default: 1)
+| `decrease_button_label` | Label for accessibility on decreasing value button
+| `increase_button_label` | Label for accessibility on increasing value button
+| `label` | input label
+| `id` | input id
+| `name` | input name
+| `data_attributes` | extra attributes for the input
+
+To detect changes in the quantity, you can subscribe to the `change` event on the `quantity-input` object:
+
+```js
+const element = 'your element here';
+const quantityInput = element.querySelector('quantity-input');
+const quantityInputElement = quantityInput.input;
+quantityInput.addEventListener('change', e => {
+    //do something when it changes
+
+    //access the actual input element
+    quantityInputElement.id...
+})
+```
+
 ## Images
 
 Images can be rendered either by using the default image tag, or by using the `image-container-responsive` snippet.
