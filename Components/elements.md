@@ -311,13 +311,10 @@ For more information on how to use the widths and sizes variable, see this link 
 
 In practice, this snippet will be used as follows:
 
-```html
-{% raw %}
+```html{% raw %}
 {% assign sizes = '100vw' %}
 {% assign widths = '500, 1200, 2400' %}
-{% render 'image-container-responsive' image: section.settings.image, aspect_ratio: 'landscape', widths: widths, sizes: sizes, preload: true %}
-{% endraw %}
-
+{% render 'image-container-responsive' image: section.settings.image, aspect_ratio: 'landscape', widths: widths, sizes: sizes, preload: true %}{% endraw %}
 ```
 
 Using the Shopify default `image_tag` object will ensure that alt tags are added, as well as focal points
