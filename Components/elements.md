@@ -307,7 +307,7 @@ The `image-container-responsive` snippet takes a few arguments:
 | `container_class` | extra class for container
 | `image_class` | extra class list for image
 
-For more information on how to use the widths and sizes variable, see this link https://performance.shopify.com/pages/liquid-image_tag-demo#fixing-oversized-mobile-images
+For more information on how to use the widths and sizes variable, see this link <https://performance.shopify.com/pages/liquid-image_tag-demo#fixing-oversized-mobile-images>
 
 In practice, this snippet will be used as follows:
 
