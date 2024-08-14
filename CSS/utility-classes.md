@@ -27,10 +27,29 @@ parent: CSS
 
 ## Box Model
 
-
 ---
 
 ## Layout
+
+### Grid
+
+| Class | Function |
+|--- | --- |
+| `.grid` | Sets `display:grid` on component with 4 columns
+| `.grid_2`, `.grid_3` | 2 or 3 column variants.
+| `.grid.vertical` | Vertical Grid
+| `.align_centre`, ``.align_start`, `.align_end` | Align items in grid
+| `.span_2`,`.span_3`,`.span_4` | For child elements in grid, adds `grid-column: span x` or `grid-row: span x` 
+
+The grid class uses two key CSS variables:
+- `--grid-columns` : the number of columns in the grid
+- `--grid-gap`: the gap (in px) of the grid
+
+When setting up a custom grid, you can change these variables to change the behaviour of the grid.
+
+The `--grid-columns` variable is set as **4** by default on desktop. This changes to **2** at screens of less than **800px wide** and then to **1** at screens of less than **500px wide**
+
+### Flex
 
 ---
 
