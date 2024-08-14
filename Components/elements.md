@@ -241,3 +241,35 @@ The boxes will scale with font size, so if you want them to be larger, you can i
 ```
 
 This will render a text input with a button. The button can be of any of the button styles
+
+## Images
+
+Images can be rendered either by using the default image tag, or by using the `image-container-responsive` snippet.
+
+The `image-container-responsive` snippet takes a few arguments:
+
+| Argument | Function |
+|--- | --- |
+| `aspect_ratio` | 'natural', 'portrait', 'square', 'landscape'
+| `default_width` | default width of image (default: image max width)
+| `widths` | widths of image to use in srcset
+| `lazyload` | true or false (default: true)
+| `preload` | true or false (default: false)
+| `image` | the image to render
+| `container_class` | extra class for container
+| `image_class` | extra class list for image
+
+For more information on how to use the widths and sizes variable, see this link https://performance.shopify.com/pages/liquid-image_tag-demo#fixing-oversized-mobile-images
+
+In practice, this snippet will be used as follows:
+
+```html
+{% raw %}
+{% assign sizes = '100vw' %}
+{% assign widths = '500, 1200, 2400' %}
+{% render 'image-container-responsive' image: section.settings.image, aspect_ratio: 'landscape', widths: widths, sizes: sizes, preload: true %}
+{% endraw %}
+
+```
+
+Using the Shopify default `image_tag` object will ensure that alt tags are added, as well as focal points
