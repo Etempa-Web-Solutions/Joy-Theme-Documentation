@@ -318,3 +318,39 @@ In practice, this snippet will be used as follows:
 ```
 
 Using the Shopify default `image_tag` object will ensure that alt tags are added, as well as focal points
+
+
+## Accordions
+
+There are two **core** types of accordions built-in to the theme: `disclosure`s and `dropdown`s
+
+They can be used interchangeably, and the structure of the code is basically the same.
+
+Accordions make use of the `details/summary` HTML elements. There is also a custom element to wrap around the elements, which will handle some additional behaviour, and accessibility.
+
+```html
+<details-disclosure data-auto-close>
+    <details class='open_highlight'>
+        <summary class='border_standard padding_small'>
+            <span>Default disclosure</span>
+            <span>{% raw %}{% render 'icon-chevron-down' %}{% endraw %}</span>
+        </summary>
+        <div id="dropdown-1" class='fade_in padding_small'>Testing</div>
+    </details>
+</details-disclosure>
+```
+
+In this example, the `details-disclosure` wraps around the `details/summary` elements. It has the `data-auto-close` attribute which will mean that when the element loses focus, the dropdown will close.
+
+The `content` of the dropdown is whatever is in the element immediately after the `summary` element. IF you give this element an `id`, then the custom element will set up some appropriate aria-labels. 
+
+The icon being rendered by the liquid snippet is optional, and will rotate on open.
+
+In this example, we have also added some additional utility classes for styling, but these could be styled with normal class names, as well
+
+| Class / Attribute | Element | Function |
+|--- | --- | --- |
+| `data-auto-close` | details-disclosure | Causes the dropdown to autoclose when focus is lost
+| `.dropdown` | details | The content will 'float' above other content, and be displayed in a narrow, scrollable box
+| `.open_highlight` | details | Will highlight the summary text (and icon) in the current primary colours on open
+| `.fade_in` | content | Will cause the content to fade in on open
