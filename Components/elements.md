@@ -342,7 +342,7 @@ Accordions make use of the `details/summary` HTML elements. There is also a cust
 
 In this example, the `details-disclosure` wraps around the `details/summary` elements. It has the `data-auto-close` attribute which will mean that when the element loses focus, the dropdown will close.
 
-The `content` of the dropdown is whatever is in the element immediately after the `summary` element. IF you give this element an `id`, then the custom element will set up some appropriate aria-labels. 
+The `content` of the dropdown is whatever is in the element immediately after the `summary` element. If you give this element an `id`, then the custom element will set up some appropriate aria-labels. 
 
 The icon being rendered by the liquid snippet is optional, and will rotate on open.
 
@@ -354,3 +354,64 @@ In this example, we have also added some additional utility classes for styling,
 | `.dropdown` | details | The content will 'float' above other content, and be displayed in a narrow, scrollable box
 | `.open_highlight` | details | Will highlight the summary text (and icon) in the current primary colours on open
 | `.fade_in` | content | Will cause the content to fade in on open
+
+
+## Modal / Dialog / Modal Opener
+
+The Modal/Dialog custom element makes use of the `dialog` HTML Element. This element is useful because it is **semantic** (meaning browsers know what type of element it is). It also always renders itself above all other content on the screen, so we don't have to worry about anything with a z-index of 9999999 anymore.
+
+The structure of the modal-dialog element is as this:
+
+```html
+<modal-dialog id='example-modal-1'>
+    <dialog>
+        <div class='relative'>
+            <button data-modal-close class='button button_secondary button_icon no_bg no_border close_button'>
+                <span>Close Modal</span>
+            </button>
+        </div>
+    </dialog>
+</modal-dialog>
+```
+
+The `modal-dialog` element should have a unique ID so that it can be opened by a button. If you plan on opening it programmatically, then an ID would still be useful, or you can use a data-attribute to identify it.
+
+The content of the actual `dialog` element is going to depend on what you need to use it for. The `button` element (along with the `data-modal-close` attribute) is important so that the dialog can be closed (though it can also be closed by presseing ESC or clicking outside the modal itself). The `<div class='relative'>` component ensures that the button is positioned in the top right of the modal.
+
+### Styling the modal
+
+The modal will be positioned in the centre of the screen, and will fill 90% of the screens width and a maximum of 95% of the screens height (depending on content). By default, the max-width of the modal will be `750px`, but this can be changed by altering the CSS variable `--dialog-max-width`. This can be done by either adding a class to the `modal-dialog` element and setting the variable inside your class or by adding it directly to the HTML:
+
+```html
+<modal-dialog id='example-modal-1' style='--dialog-max-width:500px;'>
+    <dialog>
+        ...
+```
+
+### Modal Opener
+
+The `modal-opener` custom element works in tandem with the modal element. 
+
+``` html
+<modal-opener data-modal='#example-modal-1'>
+    <button class='button button_with_icon'>
+        <span class='button_text'>Open Modal</span>
+    </button>
+</modal-opener>
+```
+
+The `data-modal` attribute takes in the ID of the `modal-dialog` element that you want to open with the button. The button can be any type of button. 
+
+When the modal is closed, focus will be returned to the button that opened it.
+
+### API
+
+You can open and close the modal by using `show()` or `hide()` on the modal-dialog element
+
+```js
+const popup = document.querySelector('modal-dialog.my_custom_popup`);
+popup.show();
+
+popup.hide();
+
+```

@@ -90,9 +90,6 @@ All partial file names to begin with _
 
 ## Javascript Coding Style
 
-All javascript classes to be in their own individual file, named the same as the class name i.e class `HtmlElement` should be in a file called `html-element.js`
-
-All javascript classes to be kept in the includes/javascript/classes folder which will be compiled into one javascript file for production. To compile your javascript, run
 
 Consider a javascript class where possible, before adding javascript code in the procedural style
 
@@ -102,7 +99,6 @@ A list of variables used in the class should be added to a commented list at the
 
 Variables saved in a set method should follow the naming format of `_nameOfSetMethod` i.e if the set method is name, the variable saved should be `_name`
 
-Additional javascript code should be added into their own file, grouped by page template where sensible i.e collection.js, product.js and only included on the page template it is required
 
 ## JSON Coding Style
 
