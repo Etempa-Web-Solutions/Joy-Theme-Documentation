@@ -72,6 +72,11 @@ Put any `@includes` at the top of the selector styles list and try to group simi
 
 All partial file names to begin with _ 
 
+### Variables / Custom properties
+
+The SCSS code makes heavy use of CSS Custom Properties (variables). Rather than define brand-new styles for different classes, try to use Custom Properties to alter the styles.
+
+
 ### Responsiveness
 
 - Account for screen sizes 280px – 2500px 

@@ -34,7 +34,7 @@ While working locally, create a new branch and work locally on the new branch us
 
 To keep the branches tidy and to avoid massive merge conflicts, try to limit yourself to one develop branch unless strictly necessary. 
 
-When you have finished your local work, merge your branch with the master branch and delete your branch. 
+When you have finished your local work, merge your branch with the develop branch and delete your branch. The develop branch will periodically be merged into the master branch to release 'versions'
 
 In the event of any conflicts, please work with the other developer to resolve. 
 
@@ -48,4 +48,8 @@ From then on, run `npm start` whenever you start developing. This will run all o
 
 You will also need to run `shopify theme dev --store=etempa-joy-theme` to preview your work. You can run this in a separate Terminal tab in order to have both commands running simultaneously
 
+# Working with Shopify Settings
 
+A lot of elements in the theme will need to be able to be customised by the user. For example, fonts, border-radii, colours etc.
+
+All of the settings will be in `settings_schema.json`, and rendered as a CSS Variable in `snippets/layout-css-variables.liquid`. These CSS variables can then be used in any of the CSS files.

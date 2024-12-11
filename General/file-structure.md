@@ -23,7 +23,7 @@ SASS files are found in **/includes/sass** and are split into two folders: **mai
 
 The `main-partials` folder contains all of the partials files that make up the main css file
 
-Any variables go in the _variables.scss file. These variables are only used in SCSS, and so cannot be accessed by the Shopify customiser. For the purposes of this project, these variables can be thought of more as **constants** rather than variables that can be changed.
+Any SCSS variables go in the _contants.scss file. These variables are only used in SCSS, and so cannot be accessed by the Shopify customiser. For the purposes of this project, these variables can be thought of more as **constants** rather than variables that can be changed.
 
 Mixins go in _mixins.scss.
 
