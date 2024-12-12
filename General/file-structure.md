@@ -84,3 +84,50 @@ These files are for general js files for use on particular sections. They might 
 
 ### global.js
 This global file contains any functionality that is needed to run on every page.
+
+
+## Liquid Section Files
+
+Liquid section files should have any required includes (JS or CSS) at the top of the file. If the section is optionally rendered (such as a Product More Information section), then these includes should be optional as well (e.g. don't include them if the section won't be shown).
+
+For any section that can have a custom colour scheme (which should probably be nearly every custom section), make sure to include the colour scheme setting:
+
+```json
+{
+      "type": "color_scheme",
+      "id": "colour_scheme",
+      "label": "Color Scheme",
+      "default": "scheme_1"
+}
+````
+
+Then you can include the output from this setting with the prefix `colour_` to use the colour scheme settings:
+
+```html
+<div class="rich_text_section colour_{% raw %}{{ section.settings.colour_scheme }}{% endraw %}...
+```
+
+To add a content section padding option to the section, include the following:
+
+```json
+{
+    "type": "select",
+    "id": "spacing",
+    "options": [
+    {
+        "value": "content_section",
+        "label": "Normal"
+    },
+    {
+        "value": "content_section_large",
+        "label": "Large"
+    },
+    {
+        "value": "content_section_small",
+        "label": "Small"
+    }
+    ],
+    "default": "content_section",
+    "label": "Section Padding"
+}
+```

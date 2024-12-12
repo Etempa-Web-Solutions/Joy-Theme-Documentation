@@ -53,3 +53,7 @@ You will also need to run `shopify theme dev --store=etempa-joy-theme` to previe
 A lot of elements in the theme will need to be able to be customised by the user. For example, fonts, border-radii, colours etc.
 
 All of the settings will be in `settings_schema.json`, and rendered as a CSS Variable in `snippets/layout-css-variables.liquid`. These CSS variables can then be used in any of the CSS files.
+
+# Using the Customiser
+
+When using the customiser while developing, you normally would use `shopify theme pull -d` to pull your changes back into your code. However, doing so will remove the `package.json` and `package-lock.json` files. These are easily restored by checking the Git changes in VSCode and undoing the Deletes for those files.
