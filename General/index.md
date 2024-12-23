@@ -16,10 +16,7 @@ We will be using the following tech stack for coding our Shopify theme:
         - Individual SASS files for each section
         - General files split by partials
         - 1 responsive SASS file
-    - Locally compiled to minified CSS files
-        - critical
-        - main
-        - css file for each section
+    - Locally compiled to CSS files
 - Javascript
     - Object Oriented Javascript
     - Custom Elements
